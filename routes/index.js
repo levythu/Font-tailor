@@ -26,5 +26,27 @@ router.post('/', function(req, res)
     else
         res.send("");
 });
+router.get('/jspadding.js', function(req,res)
+{
+    if (req.query.url!=undefined && req.query.font!=undefined)
+    {
+        if (req.query.encoding==undefined)
+            req.query.encoding="utf8";
+        req.query.url=decodeURI(req.query.url);
+        kernel.exec(req.query.url,req.query.font,req.query.encoding,function(result)
+        {
+            if (result===false)
+                res.send("console.error('<From FontGen> Fail to generate font.');");
+            else
+                res.render("jspTem",
+                {
+                    fontname:   req.query.font,
+                    fonturl:    result
+                });
+        });
+    }
+    else
+        res.send("console.error('<From FontGen> More arguments expected.');");
+});
 
 module.exports = router;

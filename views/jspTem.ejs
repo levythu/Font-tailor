@@ -1,0 +1,10 @@
+var t=document.createElement("style");
+t.type="text/css";
+t.innerHTML="@font-face {           \
+    font-family: '<%= fontname %>'; \
+    src: url('<%= fonturl %>');     \
+    font-weight: normal;            \
+    font-style: normal;             \
+}";
+document.head.appendChild(t);
+console.log("<From FontGen> The font[<%= fontname %>] has fetched successfully.");
