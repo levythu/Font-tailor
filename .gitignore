@@ -2,3 +2,5 @@
 /metadata/metadata.json
 /public/res/*
 /fonts/*
+/bin/*.log
+*~

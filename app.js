@@ -13,7 +13,7 @@ process.on('uncaughtException', function(err)
 {
     console.log("****LETHAL EXCEPTION!!!******");
     if (err.stack)
-        console.err(err.stack);
+        console.error(err.stack);
 });
 
 // view engine setup

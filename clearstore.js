@@ -35,5 +35,5 @@ for (var i=0;i<filelist.length;i++)
         console.log("<"+(new Date()).toUTCString()+">\tremove file:\t"+setting.desFontPath+filelist[i]);
     }
 }
-
+console.log("Autoclear accomplished at "+(new Date()).toUTCString());
 // now, it could be relaunched.
