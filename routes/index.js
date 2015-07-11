@@ -38,11 +38,16 @@ router.get('/jspadding.js', function(req,res)
             if (result===false)
                 res.send("console.error('<From FontGen> Fail to generate font.');");
             else
-                res.render("jspTem",
+            {
+                var retTem="jspGenTem";
+                if (req.query.addcss!=undefined)
+                    retTem="jspTEm";
+                res.render(retTem,
                 {
                     fontname:   req.query.font,
                     fonturl:    result
                 });
+            }
         });
     }
     else
