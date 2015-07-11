@@ -25,6 +25,14 @@ Further plans:
         - Correct: the url of tailored ttf file.
         - Wrong: empty string.
 
+- GET(used for cross-domain fetch)
+    - URL: server_root/jspadding.js?queries
+    - Queries:
+        - font: same as above.
+        - url: same as above.
+        - [encoding]: same as above.
+        - [addcss]: if specified, will get one js designed to add one @fontface css to the DOM; if not, one js containing the font-url will be returned. To modify the returned js, change views/*.ejs
+
 ##How to deploy
 - Download the source code by git.
 - `$ npm install` to install all the dependencies. (For some components like express, root privilege may be needed.)
