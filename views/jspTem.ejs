@@ -1,10 +1,16 @@
 var t=document.createElement("style");
 t.type="text/css";
-t.innerHTML="@font-face {           \
-    font-family: '<%= fontname %>','宋体'; \
-    src: url('<%= fonturl %>');     \
-    font-weight: normal;            \
-    font-style: normal;             \
+t.innerHTML="@font-face {                                                       \
+    font-family: '<%= fontname %>';                                             \
+    src: url('<%= fonturl %>');                                                 \
+    font-weight: normal;                                                        \
+    font-style: normal;                                                         \
+    unicode-range: U+4E00-9FFF;                                                 \
+}                                                                               \
+@font-face {                                                                    \
+	font-family: '<%= fontname %>';                                             \
+	src: url('../font/Vollkorn-Regular.ttf');                                   \
+	unicode-range: U+00-024F;                                                   \
 }";
 document.head.appendChild(t);
 console.log("<From FontGen> The font[<%= fontname %>] has fetched successfully.");
