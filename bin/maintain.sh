@@ -1,6 +1,9 @@
-#! /bin/sh
-./terminator.sh
-cd ../
+#! /bin/bash
+
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+cd "$DIR"
+cd ..
+
+./bin/terminator.sh
 /usr/local/bin/node clearstore.js >> bin/maintain.log 2>&1
-cd bin/
-./launcher.sh
+./bin/launcher.sh

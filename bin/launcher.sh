@@ -1,2 +1,2 @@
 #! /bin/sh
-nohup ./font-gen-launch >>run.log 2>&1 &
+nohup npm start >>run.log 2>&1 &
