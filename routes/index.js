@@ -41,7 +41,7 @@ router.get('/jspadding.js', function(req,res)
             {
                 var retTem="jspGenTem";
                 if (req.query.addcss!=undefined)
-                    retTem="jspTEm";
+                    retTem="jspTem";
                 res.render(retTem,
                 {
                     fontname:   req.query.font,
