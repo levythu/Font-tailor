@@ -2,14 +2,14 @@
 ##General Intro
 A nodejs-based server used to provide RESTful API to get tailored font src from one particular websites. (That is, if the website has only three characters(asd), the tailored font will be as tiny as to hold only these three, thus reducing the data transfered for fontface)
 
-Characters:
+##Characters:
 
 - RESTful API: post url, fontname and encoding as parameters, get the url of .ttf file.
 - Two-phase caching: PHASE#1, cache the .ttf file based on url, updating it over expiring time; PHASE#2, caching based on SHA1 of content.
 - Garbage cleaning: scripts provided to automatically removing files that are no more needed by any cache.
 - Whitelist: regular-expression whitelist, only websites in them could be used to tailor fonts, thus saving storage and cpu.
 
-Further plans:
+##Further plans:
 - Multiple process to accelerate response.
 - Automatic css/js for frontend.
 - Other relevant utilities
