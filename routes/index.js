@@ -32,7 +32,7 @@ router.get('/jspadding.js', function(req,res)
     {
         if (req.query.encoding==undefined)
             req.query.encoding="utf8";
-        req.query.url=decodeURI(req.query.url);
+        req.query.url=decodeURIComponent(req.query.url);
         kernel.exec(req.query.url,req.query.font,req.query.encoding,function(result)
         {
             if (result===false)
