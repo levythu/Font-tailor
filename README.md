@@ -1,4 +1,5 @@
 #Font tailor
+[Dev Blog Here](http://www.levy.at/blog/5)
 ##General Intro
 A nodejs-based server used to provide RESTful API to get tailored font src from one particular websites. (That is, if the website has only three characters(asd), the tailored font will be as tiny as to hold only these three, thus reducing the data transfered for fontface)
 
