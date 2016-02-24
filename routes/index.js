@@ -6,7 +6,7 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res)
 {
-    res.send("Font provide server.");
+    res.send("Fonts provider server.");
 });
 
 router.post('/', function(req, res)
