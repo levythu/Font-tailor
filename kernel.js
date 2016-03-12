@@ -48,7 +48,8 @@ function httpGet(url,encoding,callback)
     {
         url: url,
         followRedirect: false,
-        encoding: encoding
+        encoding: encoding,
+        strictSSL: false
     };
     request(opt, function(error, response, body)
     {

@@ -4,7 +4,8 @@ var opt=
 {
     url: "https://academic.levy.at",
     followRedirect: false,
-    encoding: "utf8"
+    encoding: "utf8",
+    strictSSL: false
 };
 request(opt, function(error, response, body)
 {
