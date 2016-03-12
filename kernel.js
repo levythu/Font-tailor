@@ -8,6 +8,7 @@ var lock=require("./lock");
 var logger=require("./logger");
 var wl=require("./metadata/whitelist");
 var setting=require("./metadata/settings");
+var request=require("request");
 
 var filelist={};
 
@@ -43,21 +44,26 @@ function checkValidity(str)
 }
 function httpGet(url,encoding,callback)
 {
-    http.get(url, function(res)
+    var opt=
     {
-        res.setEncoding(encoding);
-        var dat="";
-        res.on('data', function (chunk)
-        {
-            dat+=chunk;
-        });
-        res.on('end', function()
-        {
-            callback(dat);
-        });
-    }).on('error', function(e)
+        url: url,
+        followRedirect: false,
+        encoding: encoding
+    };
+    request(opt, function(error, response, body)
     {
-        callback(false);
+            if (error)
+            {
+                //console.log("GET fail ", url);
+                callback(false);
+                return;
+            }
+            var status=response.statusCode;
+            status=""+status;
+
+            //console.log("GET succ ", url);
+            callback(body)
+
     });
 }
 function calculateHASH(srcstr)
