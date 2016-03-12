@@ -13,6 +13,6 @@ request(opt, function(error, response, body)
             console.log("GET fail ", error);
             return;
         }
-        callback(body)
+        console.log(body)
 
 });
