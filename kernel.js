@@ -122,7 +122,7 @@ function mainFunc(href,fontname,encoding,callback)
                         metadata[res]=
                         {
                             timestamp:  (new Date()).getTime(),
-                            value:      "http://"+setting.hostname+"/"+setting.relOutputPath+hashedCode+".ttf"
+                            value:      "https://"+setting.hostname+"/"+setting.relOutputPath+hashedCode+".ttf"
                         };
                         if (iscreate)
                             console.log("<"+(new Date()).toUTCString()+">\tcreate cache:\t"+res+"->"+hashedCode);
